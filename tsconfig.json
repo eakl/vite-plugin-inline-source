@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "types": ["vitest/globals"],
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+  },
+  "include": [
+    "src/**/*.ts",
+    "__tests__/**/*.spec.ts"
+  ]
+}

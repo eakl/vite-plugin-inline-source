@@ -1,0 +1,61 @@
+{
+  "name": "@eakl/vite-plugin-inline-source",
+  "description": "Inline JS and CSS in HTML",
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "author": "eakl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eakl/vite-plugin-inline-source"
+  },
+  "homepage": "https://github.com/eakl/vite-plugin-inline-source#readme",
+  "bugs": "https://github.com/eakl/vite-plugin-inline-source/issues",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch src",
+    "test": "vitest run",
+    "test:dev": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "git:push": "git push",
+    "release": "pnpm run build && changeset publish"
+  },
+  "dependencies": {
+    "html-prettify": "^1.0.7"
+  },
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^0.29.2",
+    "rollup": "^3.19.1",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.4",
+    "vitest": "^0.29.2"
+  },
+  "peerDependencies": {
+    "vite": "^4.1.4"
+  },
+  "engines": {
+    "node": ">=16.18.0",
+    "pnpm": ">=7.27.1"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "inline",
+    "inline-source"
+  ]
+}
